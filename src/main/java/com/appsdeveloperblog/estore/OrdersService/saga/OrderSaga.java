@@ -1,8 +1,8 @@
 package com.appsdeveloperblog.estore.OrdersService.saga;
 
 import com.appsdeveloperblog.estore.OrdersService.core.events.OrderCreatedEvent;
-import com.appsdeveloperblogs.estore.core.commands.ReserveProductCommand;
-import com.appsdeveloperblogs.estore.core.events.ProductReservedEvent;
+import com.appsdeveloperblog.estore.core.commands.ReserveProductCommand;
+import com.appsdeveloperblog.estore.core.events.ProductReservedEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.axonframework.commandhandling.gateway.CommandGateway;
 import org.axonframework.modelling.saga.SagaEventHandler;
@@ -15,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class OrderSaga {
 
     @Autowired
-    private CommandGateway commandGateway;
+    private transient CommandGateway commandGateway;
 
     @StartSaga
     @SagaEventHandler(associationProperty = "orderId")
