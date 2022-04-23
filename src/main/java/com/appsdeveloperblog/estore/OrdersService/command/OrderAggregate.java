@@ -31,7 +31,7 @@ public class OrderAggregate {
     }
 
     @EventSourcingHandler
-    public void on (OrderCreatedEvent orderCreatedEvent) {
+    public void on(OrderCreatedEvent orderCreatedEvent) {
         this.orderId = orderCreatedEvent.getOrderId();
         this.userId = orderCreatedEvent.getUserId();
         this.productId = orderCreatedEvent.getProductId();
@@ -39,6 +39,4 @@ public class OrderAggregate {
         this.addressId = orderCreatedEvent.getAddressId();
         this.orderStatus = orderCreatedEvent.getOrderStatus();
     }
-
-
 }
