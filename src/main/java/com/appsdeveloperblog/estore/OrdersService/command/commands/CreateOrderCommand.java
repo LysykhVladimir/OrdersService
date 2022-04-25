@@ -1,5 +1,6 @@
-package com.appsdeveloperblog.estore.OrdersService.command;
+package com.appsdeveloperblog.estore.OrdersService.command.commands;
 
+import com.appsdeveloperblog.estore.OrdersService.command.OrderStatus;
 import lombok.Builder;
 import lombok.Data;
 import org.axonframework.modelling.command.TargetAggregateIdentifier;
